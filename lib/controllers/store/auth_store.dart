@@ -8,18 +8,27 @@ class AuthStore extends BaseController {
   AuthStore(this._storage);
 
   static AuthStore get to => Get.find();
-
+  static const USER = 'USER';
   final Sessions _storage;
+
+  String user;
+
+  final _isLogged = false.obs;
 
   @override
   void onInit() {
-    
+    ever(_isLogged, fireRoute);
     super.onInit();
+    init();
+  }
+
+  Future init() {
+    user = _storage.load(USER);
   }
 
   fireRoute(logged) {
-    if (logged) {
-      Get.offNamedUntil(Routes.home, (route) => false);
+    if (!logged) {
+      Get.offNamedUntil(Routes.login, (route) => false);
     }
   }
 

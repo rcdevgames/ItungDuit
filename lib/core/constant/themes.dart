@@ -7,7 +7,6 @@ class Themes {
   static ThemeData getTheme(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return ThemeData(
-      brightness: Brightness.dark,
       primaryColor: primaryLight,
       primaryColorDark: primary,
       primaryColorBrightness: Brightness.dark,

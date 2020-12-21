@@ -7,7 +7,7 @@ class Pages {
   static List<GetPage> pagesList = [
     GetPage(
       name: Routes.initialRoute, 
-      page: null,
+      page: () => SplashScreenPage(),
     )
   ];
 }
