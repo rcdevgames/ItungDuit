@@ -43,6 +43,3 @@ app.*.map.json
 #Credential Firebase
 /android/app/google-services.json
 /ios/runner/GoogleService-Info.plist
-
-#Credential Edit
-ios/Runner/Info.plist
